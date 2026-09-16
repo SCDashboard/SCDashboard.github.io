@@ -1,1 +1,39 @@
-PLACEHOLDER_WILL_FAIL
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>Club Champ</title>
+<link rel="stylesheet" href="styles.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<div id="home" class="screen on">
+<div class="home-card">
+<div class="deli-badge">Deli Line Training</div>
+<div class="title">CLUB CHAMP</div>
+<div class="tagline">Build it right. Every ticket.</div>
+<div class="home-grid">
+<div class="field"><label>Teammate name</label><input id="playerName" maxlength="24" placeholder="Your name"/></div>
+<button type="button" class="mode-btn primary" data-mode="practice"><b>Practice Board</b><span>Pick a club + C2 or Whole.</span></button>
+<button type="button" class="mode-btn" data-mode="rush"><b>Ticket Rush</b><span>5 random tickets.</span></button>
+<button type="button" class="mode-btn gold" data-mode="champ"><b>Championship</b><span>All 7 clubs.</span></button>
+<button type="button" class="mode-btn" data-mode="quiz"><b>Spec Pop Quiz</b><span>Portions and heat steps.</span></button>
+<button type="button" class="mode-btn" data-mode="book"><b>Recipe Rail</b><span>Study the builds.</span></button>
+</div>
+<p id="bestLine" style="font-weight:800"></p>
+</div>
+</div>
+<div id="pick" class="screen"><div class="topbar"><button class="ghost" onclick="goHome()">Home</button><h2 style="color:#fbf4e4">Choose your club</h2></div><div id="pickGrid" class="pick-grid"></div></div>
+<div id="game" class="screen"><div class="game-top"><div class="ticket"><div class="who" id="ticketWho">GUEST</div><h2 id="ticketName">CLUB</h2><div class="mods" id="ticketMods"></div></div><div class="hud"><span>Score</span><b id="scoreEl">0</b><div class="rank-chip" id="rankEl">New Hire</div></div><div class="hud"><span id="hudLabel">Ticket</span><b id="hudVal">1 / 1</b><div id="timerEl">-</div><button class="ghost" onclick="goHome()">Bail</button></div></div><div class="game-body"><div class="board-wrap"><div class="plate"><div class="stack" id="stack"></div></div><div class="hint-line" id="hintLine">Tap the next spec step.</div></div><div class="station"><h3>Station</h3><div class="bin-grid" id="bins"></div><div class="feedback" id="feedback">Order up.</div></div></div></div>
+<div id="results" class="screen"></div>
+<div id="book" class="screen"></div>
+<div id="quiz" class="screen"></div>
+<div id="beginModal" class="modal"></div>
+<div id="specModal" class="modal"></div>
+<div id="doneModal" class="modal"></div>
+<script src="quiz.js"></script>
+<script src="menu1.js"></script>
+<script src="menu2.js"></script>
+<script src="engine.js"></script>
+</body></html>
